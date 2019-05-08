@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-# require 'capistrano/ext/multistage'
+ require 'capistrano/scm/git'
 lock '3.10.0'
 
 set :stages, ["production"]
