@@ -1,6 +1,6 @@
 # config valid only for Capistrano 3.1
  require 'capistrano/scm/git'
-lock '3.10.0'
+lock '3.11.0'
 
 set :stages, ["production"]
 set :default_stage, "production"
@@ -8,7 +8,7 @@ set :ssh_options, {:forward_agent => true}
 
 set :application, 'capistrano_example'
 set :repo_url, 'git@github.com:EmmanuelContry/aver.git'
-set :user, "davzie"
+set :user, "EmmanuelContry"
 
 #set :linked_dirs, %w(my_shared_directory)
 
