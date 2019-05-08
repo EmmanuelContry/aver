@@ -1,6 +1,6 @@
 # config valid only for Capistrano 3.1
  require 'capistrano/scm/git'
-lock '3.10.0'
+lock '3.11.0'
 
 set :stages, ["production"]
 set :default_stage, "production"
