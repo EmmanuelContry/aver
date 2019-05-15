@@ -16,7 +16,7 @@ set :default_stage, "production"
 set :ssh_options, {:forward_agent => true}
 
 set :application, 'capistrano_example'
-set :repo_url, 'https://EmmanuelContry:a076f919899eb5d05ff4855a3aecf0eb43f603bf@@github.com:EmmanuelContry/aver.git'
+set :repo_url, 'https://EmmanuelContry:a076f919899eb5d05ff4855a3aecf0eb43f603bf@github.com:EmmanuelContry/aver.git'
 set :user, "EmmanuelContry"
 
 #set :linked_dirs, %w(my_shared_directory)
