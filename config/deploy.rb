@@ -1,5 +1,14 @@
 # config valid only for Capistrano 3.1
- require 'capistrano/scm/git'
+require 'capistrano/scm/git'
+require 'capistrano/rbenv'
+require 'capistrano/rbenv_install'
+require 'capistrano/rbenv_vars'
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+require 'capistrano/passenger'
+require 'airbrussh/capistrano'
+
 lock '3.11.0'
 
 set :stages, ["production"]
