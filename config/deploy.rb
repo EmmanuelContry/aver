@@ -1,13 +1,4 @@
 # config valid only for Capistrano 3.1
-require 'capistrano/scm/git'
-require 'capistrano/rbenv'
-require 'capistrano/rbenv_install'
-require 'capistrano/rbenv_vars'
-require 'capistrano/bundler'
-require 'capistrano/rails/assets'
-require 'capistrano/rails/migrations'
-require 'capistrano/passenger'
-require 'airbrussh/capistrano'
 
 lock '3.11.0'
 
@@ -25,11 +16,17 @@ namespace :deploy do
 
 
     desc 'Print The Server Name'
-    task :print_server_name do
-      on roles(:app), in: :groups, limit:1 do
-        execute "hostname"
-      end
+    task :path do
+    on roles :app do
+        puts "Release path: #{release_path}"
+        puts "Current path: #{current_path}"
+        execute "ln -s /home/memenuel/1 #{release_path}/index.html"
     end
+    #task :print_server_name do
+     # on roles(:app), in: :groups, limit:1 do
+      #  execute "hostname"
+      #end
+    #end
 
 end
 
